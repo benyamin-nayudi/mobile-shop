@@ -2,6 +2,7 @@ import { BrowserRouter as Router  , Route , Switch  , Redirect} from 'react-rout
 import Cart from "./components/Cart";
 import Home from './components/Home';
 import Navbar from './components/Navbar';
+import "./App.css"
 function App() {
   return (
     <div >
