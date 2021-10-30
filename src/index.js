@@ -1,11 +1,23 @@
+import App from './App';
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {configureStore} from "@reduxjs/toolkit"
+import {Provider } from "react-redux"
+import productReducer from './features/productsSlice';
 
-import App from './App';
+
+const store = configureStore({
+  reducer: {
+    products: productReducer,
+  }
+})
+
 
 ReactDOM.render(
   <React.StrictMode>
+  <Provider store={store}>
     <App />
+  </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
