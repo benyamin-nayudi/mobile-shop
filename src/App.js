@@ -2,6 +2,9 @@ import { BrowserRouter as Router  , Route , Switch  , Redirect} from 'react-rout
 import Cart from "./components/Cart";
 import Home from './components/Home';
 import Navbar from './components/Navbar';
+import NotFound from './components/NotFound';
+
+
 import "./App.css"
 function App() {
   return (
@@ -11,6 +14,7 @@ function App() {
         <Switch>
           <Route path="/cart" component={Cart} />
           <Route path="/" exact component={Home} />
+          <Route path="*" component={NotFound} />
         </Switch>
       </Router>
 
